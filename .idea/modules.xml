@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HECPrototype.iml" filepath="$PROJECT_DIR$/HECPrototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HECActivation.iml" filepath="$PROJECT_DIR$/HECActivation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
