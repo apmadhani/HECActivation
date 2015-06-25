@@ -7,6 +7,7 @@
     <dimen name="large_margin">50dp</dimen>
     <dimen name="view_size">200dp</dimen>
     <dimen name="view_size_larger">250dp</dimen>
+    <dimen name="view_size_largest">400dp</dimen>
     <dimen name="text_tiny">16dp</dimen>
     <dimen name="text_small">20dp</dimen>
     <dimen name="text_size">24dp</dimen>

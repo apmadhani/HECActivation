@@ -19,7 +19,7 @@ public class SubscriptionTypeActivity extends Activity {
         username = getIntent().getStringExtra(LoginActivity.USERNAME);
     }
 
-    
+
     public void paymentPremium(View view) {
         Intent intent = paymentIntent();
         intent.putExtra(SUBSCRIPTION, "premium");

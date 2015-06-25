@@ -37,8 +37,8 @@
     <string name="set_subscription">Step 2: Choose your Subscription Type</string>
     <string name="choose_payment">Step 3: Choose Your Payment Method</string>
     <string name="activate">Step 4: Complete your payment online</string>
-    <string name="activation_extra_info">Fulfill your payment on your laptop or mobile device at http://173.0.94.73/activate</string>
-    <string name="activate_message">In order to complete your payment, go to http://173.0.94.73/activate and enter in the following activation code:</string>
+    <string name="activation_extra_info">Fulfill your payment on your laptop or mobile device at paypal.com/activate</string>
+    <string name="activate_message">In order to complete your payment, go to paypal.com/activate and enter in the following activation code:</string>
     <string name="payment_cancelled">Payment Cancelled</string>
     <string name="cancelled_extra_info">Please press the button below to return to the subscription page</string>
     <string name="notification_extra_info">We will email or text you a link where you can finish your payment on a laptop or mobile device</string>

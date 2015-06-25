@@ -15,12 +15,7 @@ public class CancelledActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loading);
-        findViewById(R.id.progressLoadingPage).setVisibility(View.INVISIBLE);
-        email = getIntent().getStringExtra(LoginActivity.USERNAME);
-        ((TextView) findViewById(R.id.loading_title)).setText(getString(R.string.payment_cancelled));
-        ((TextView) findViewById(R.id.prompt_continue)).setText(getString(R.string.cancelled_extra_info));
-        ((Button) findViewById(R.id.cancel_button)).setText(R.string.goto_subscription);
+        setContentView(R.layout.activity_cancelled);
     }
 
     public void cancel(View v) {

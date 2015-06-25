@@ -35,14 +35,6 @@
             android:parentActivityName="com.paypal.hecactivation.LoginActivity" >
         </activity>
         <activity
-            android:name="com.paypal.hecactivation.SendNotificationActivity"
-            android:label="@string/title_activity_send_notification"
-            android:parentActivityName="com.paypal.hecactivation.PaymentMethodActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.paypal.hecactivation.PaymentMethodActivity" />
-        </activity>
-        <activity
             android:name="com.paypal.hecactivation.TVActivity"
             android:label="@string/title_activity_tv"
             android:parentActivityName="com.paypal.hecactivation.SendNotificationActivity" />
