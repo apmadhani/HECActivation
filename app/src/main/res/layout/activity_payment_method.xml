@@ -39,6 +39,7 @@
             android:layout_margin="@dimen/normal_margin"
             android:clickable="true"
             android:onClick="sendNotificationPage"
+            android:scaleType="centerInside"
             />
 
         <ImageButton
@@ -48,7 +49,7 @@
             android:src="@drawable/credit_card"
             android:layout_margin="@dimen/normal_margin"
             android:clickable="true"
-            android:scaleType="fitXY"
+            android:scaleType="centerInside"
         />
     </LinearLayout>
 

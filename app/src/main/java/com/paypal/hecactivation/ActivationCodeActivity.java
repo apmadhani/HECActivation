@@ -1,11 +1,13 @@
 package com.paypal.hecactivation;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,8 +24,10 @@ public class ActivationCodeActivity extends Activity {
         Intent intent = getIntent();
         email = intent.getStringExtra(LoginActivity.USERNAME);
         cartID=intent.getStringExtra(PaymentMethodActivity.CART_TOKEN);
+        String code = intent.getStringExtra(PaymentMethodActivity.ACTIVATION_CODE);
 
-        ((TextView) findViewById(R.id.activation_code)).setText(getCode());
+        ((TextView) findViewById(R.id.activation_code)).setText(code);
+
         new Thread(new Runnable() {
             public void run() {
                 getStatus(cartID);
@@ -59,33 +63,6 @@ public class ActivationCodeActivity extends Activity {
             return "error";
         }
     }
-
-    private String getCode() {
-        JSONObject json = new JSONObject();
-        JSONObject cartToken = new JSONObject();
-        JSONObject payment = new JSONObject();
-
-        try {
-            payment.put("method", getString(R.string.payment_method_activation));
-            cartToken.put("ec_token", cartID);
-            cartToken.put("payment", payment);
-            json.put("clientID", 1);
-            json.put("clientKey", getString(R.string.client_key));
-            json.put("data", cartToken);
-
-            JSONObject jsonResponse = HTTPNetworkManager.postRequest(json, getString(R.string.payment_send_url));
-
-            if (jsonResponse != null && "success".equals((String) jsonResponse.get("status"))) {
-                return (String) ((JSONObject) jsonResponse.get("data")).get(getString(R.string.payment_method_activation));
-            } else {
-                return "error";
-            }
-        } catch(JSONException e) {
-            e.printStackTrace();
-            return "error";
-        }
-    }
-
 
 
     public void cancel(View view) {
