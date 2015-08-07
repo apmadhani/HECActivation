@@ -21,7 +21,7 @@ At this point, you'll have to replace url:port in credentials.xml with the addre
 
 ##Mock Server Information
 
-This app will communicate with the merchant server, which will communicate with the PayPal servers to get express checkout links and send them to the users by email/SMS. Currently, paypal.com/activate has not been set up, so the mock merchant server will need to set up its own activation page; this activation page should receive the activation code, and, if its valid, redirect to the PayPal express checkout flow. The merchant server must have the following endpoints:
+This app will communicate with the merchant server, which will communicate with the PayPal servers to get express checkout links. Currently, paypal.com/activate has not been set up, so the mock merchant server will need to set up its own activation page; this activation page should receive the activation code, and, if its valid, redirect to the PayPal express checkout flow. The merchant server must have the following endpoints:
 
 | Endpoint                              | Description                                           |
 | ------------------------------------- | ----------------------------------------------------- |
