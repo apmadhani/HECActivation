@@ -1,7 +1,7 @@
 # HECActivation
 ######Alternative to PayPal's Headless Express Checkout flow
 
-Headless Express Checkout is PayPal's current checkout flow for trusted merchants on set-top boxes without traditional browsers. It is being phased out by the end of 2015 and needs to be replaced. One of the proposed solutions is an activation code system, where the merchant prompts the consumer to go to paypal.com/activate and enter in an activation code the merchant receives from PayPal and displays to the consumer; upon entering the code, the consumer logs into PayPal and goes through the standard express checkout flow. In this flow, the activation code acts as a shorter key that maps to an express checkout token. This Android TV app is a prototype proof-of-concept for an HEC replacement involving an activation code; it mocks a Netflix flow on a set-top box.
+Headless Express Checkout is PayPal's current checkout flow for trusted merchants on set-top boxes without traditional browsers. It is being phased out by the end of 2015 and needs to be replaced. One of the proposed solutions is an activation code system, where the merchant prompts the consumer to go to paypal.com/activate and enter in the activation code displayed on the screen; upon entering the code, the consumer logs into PayPal and goes through the standard express checkout flow. In this prototype, the activation code acts as a short key that maps to an express checkout token. This Android TV app is a prototype proof-of-concept for an HEC replacement involving an activation code; it mocks a Netflix flow on a set-top box.
 
 An alternative flow to replace Headless Express Checkout with a notification based system can be found [here] (https://github.com/apmadhani/HECPrototype).
 
@@ -9,8 +9,8 @@ An alternative flow to replace Headless Express Checkout with a notification bas
 
 ```bash
     # clone the repo
-    $ git clone git@github.com:apmadhani/HECPrototype.git
-    $ cd HECPrototype
+    $ git clone git@github.com:apmadhani/HECActivation.git
+    $ cd HECActivation
 
     # set up configurations
     $ cp app/src/main/res/values/credentials.xml.example app/src/main/res/values/credentials.xml
@@ -26,7 +26,7 @@ This app will communicate with the merchant server, which will communicate with 
 | Endpoint                              | Description                                           |
 | ------------------------------------- | ----------------------------------------------------- |
 | [/cart/submit](#cartsubmit)           | Submit the item(s) in the user's cart.                |
-| [/payment/send](#paymentsend)         | Send the PayPal EC link to the user's phone or email. |
+| [/payment/send](#paymentsend)         | Get PayPal EC link and set up/send activation code.   |
 | [/payment/status](#paymentstatus)     | Check on the status of a payment.                     |
 
 The endpoints should have the following API's:
